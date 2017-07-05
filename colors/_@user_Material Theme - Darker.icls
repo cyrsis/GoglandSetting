@@ -4,7 +4,7 @@
     <property name="created">2017-07-03T16:17:36</property>
     <property name="ide">Gogland</property>
     <property name="ideVersion">1.0.0.0</property>
-    <property name="modified">2017-07-03T16:20:33</property>
+    <property name="modified">2017-07-05T13:58:11</property>
     <property name="originalScheme">Material Theme - Darker</property>
   </metaInfo>
   <option name="LINE_SPACING" value="1.4" />
@@ -398,7 +398,7 @@
     </option>
     <option name="DEFAULT_BLOCK_COMMENT">
       <value>
-        <option name="FOREGROUND" value="4a4a4a" />
+        <option name="FOREGROUND" value="35eb00" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -452,7 +452,7 @@
     </option>
     <option name="DEFAULT_DOC_MARKUP">
       <value>
-        <option name="FOREGROUND" value="4a4a4a" />
+        <option name="FOREGROUND" value="35eb00" />
       </value>
     </option>
     <option name="DEFAULT_DOT">
@@ -509,7 +509,7 @@
     </option>
     <option name="DEFAULT_LINE_COMMENT">
       <value>
-        <option name="FOREGROUND" value="4a4a4a" />
+        <option name="FOREGROUND" value="35eb00" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
