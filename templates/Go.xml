@@ -1,13 +1,8 @@
 <templateSet group="Go">
-  <template name="sout" value="fmt.Println($variable$)" description="fmt.Println($variable$)" toReformat="true" toShortenFQNames="true">
-    <variable name="variable" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="byteArray" value="[]byte($bytevariable$)" description="byteArray" toReformat="true" toShortenFQNames="true">
+    <variable name="bytevariable" expression="" defaultValue="&quot;Hello World and u would like it&quot;" alwaysStopAt="true" />
     <context>
-      <option name="GO_STATEMENT" value="true" />
-    </context>
-  </template>
-  <template name="ifnotnull" value="&#9;if err != nil {&#10;&#9;&#9;&#9;if err == io.EOF {&#10;&#9;&#9;&#9;&#9;printLog(&quot;The connection is closed by another side. (Client[%d])\n&quot;, id)&#10;&#9;&#9;&#9;} else {&#10;&#9;&#9;&#9;&#9;printLog(&quot;Read Error: %s (Client[%d])\n&quot;, err, id)&#10;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;break&#10;&#9;&#9;}" description="if err != nil {" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="GO_STATEMENT" value="true" />
+      <option name="GO" value="true" />
     </context>
   </template>
 </templateSet>
