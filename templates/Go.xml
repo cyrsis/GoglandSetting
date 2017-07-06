@@ -5,7 +5,9 @@
       <option name="GO_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="ifnotnull" value="&#9;if err != nil {&#10;&#9;&#9;&#9;if err == io.EOF {&#10;&#9;&#9;&#9;&#9;printLog(&quot;The connection is closed by another side. (Client[%d])\n&quot;, id)&#10;&#9;&#9;&#9;} else {&#10;&#9;&#9;&#9;&#9;printLog(&quot;Read Error: %s (Client[%d])\n&quot;, err, id)&#10;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;break&#10;&#9;&#9;}" description="if err != nil {" toReformat="true" toShortenFQNames="true">
+  <template name="ifnotnull" value="&#9;if $error$ != nil {&#10;&#9;&#9;&#9;$function$&#10;&#9;&#9;}" description="if not null" toReformat="true" toShortenFQNames="true">
+    <variable name="error" expression="clipboard()" defaultValue="&quot;error&quot;" alwaysStopAt="true" />
+    <variable name="function" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="GO_STATEMENT" value="true" />
     </context>
@@ -16,6 +18,13 @@
     <variable name="time" expression="time()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="GO_FILE" value="true" />
+    </context>
+  </template>
+  <template name="pair" value="_, error := $function$" description="pair of variable" toReformat="true" toShortenFQNames="true">
+    <variable name="function" expression="" defaultValue="&quot;function&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="GO_FILE" value="true" />
+      <option name="GO_STATEMENT" value="true" />
     </context>
   </template>
 </templateSet>
