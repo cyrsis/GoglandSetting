@@ -12,7 +12,7 @@
       <option name="GO_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="//h" value="/**&#10; * $Objective$&#10; *&#10; * @param  url  an absolute URL giving the base location of the image&#10; * @param  name the location of the image, relative to the url argument&#10; * @return      the image at the specified URL&#10; * @see         Image&#10; * @$date$ $time$&#10; */" description="Comment for header Files" toReformat="true" toShortenFQNames="true">
+  <template name="//h" value="/**&#10; * $Objective$&#10; *&#10; * @param  url  an absolute URL giving the base location of the image&#10; * @param  name the location of the image, relative to the url argument&#10; * @return      the image at the specified URL&#10; * @see         Image&#10; * @$date$ $time$&#10; */" description="Comment for header Files" toReformat="true" toShortenFQNames="true" deactivated="true">
     <variable name="Objective" expression="" defaultValue="&quot;Objective&quot;" alwaysStopAt="true" />
     <variable name="date" expression="date()" defaultValue="" alwaysStopAt="true" />
     <variable name="time" expression="time()" defaultValue="" alwaysStopAt="true" />
@@ -34,6 +34,15 @@
     <variable name="anyOther" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="GO_FILE" value="true" />
+      <option name="GO_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="ifelse" value="if $expression$ {&#10;&#9;&#9;$function1$&#10;&#9;}else if $expression2$ {&#10;&#9;&#9;$function2$&#10;&#9;}" description="if else if" toReformat="true" toShortenFQNames="true">
+    <variable name="expression" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="function1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="expression2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="function2" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
       <option name="GO_STATEMENT" value="true" />
     </context>
   </template>
