@@ -86,7 +86,8 @@
       <option name="GO_TYPE" value="true" />
     </context>
   </template>
-  <template name="rangeInDic" value="for k, v := range kvs {&#10;        fmt.Printf(&quot;%s -&gt; %s\n&quot;, k, v)&#10;    }" description="Loop over variable" toReformat="true" toShortenFQNames="true">
+  <template name="rangeInDic" value="for k, v := range $Dic$ {&#10;        fmt.Printf(&quot;%s -&gt; %s\n&quot;, k, v)&#10;    }" description="Loop over variable" toReformat="true" toShortenFQNames="true">
+    <variable name="Dic" expression="clipboard()" defaultValue="&quot;TypeDic&quot;" alwaysStopAt="true" />
     <context>
       <option name="GO_BLOCK" value="true" />
       <option name="GO_EXPRESSION" value="true" />
@@ -98,6 +99,31 @@
   <template name="funcTakesAllInt" value="func plusPlus(a, b, c int) int {&#10;    return a + b + c&#10;}" description="Function take all Int return int" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="GO_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="vararg" value="...$types$" description="var arg" toReformat="true" toShortenFQNames="true">
+    <variable name="types" expression="" defaultValue="&quot;int&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="GO" value="true" />
+    </context>
+  </template>
+  <template name="closure" value="nextInt := intSeq()&#10;&#10;    fmt.Println(nextInt())&#10;    fmt.Println(nextInt())&#10;    fmt.Println(nextInt())&#10;" description="Assign Function to Variable" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="GO_BLOCK" value="true" />
+      <option name="GO_EXPRESSION" value="true" />
+      <option name="GO_FILE" value="true" />
+      <option name="GO_STATEMENT" value="true" />
+      <option name="GO_TYPE" value="true" />
+    </context>
+  </template>
+  <template name="closureFunction" value="func $FunctionName$() func() int {&#10;      i:=0&#10;&#9;return func() int {&#10;&#9;&#9;i+=1&#10;&#10;&#9;&#9;return i&#10;&#9;}&#10;}" description="Func of Func with 2 level of return station" toReformat="true" toShortenFQNames="true">
+    <variable name="FunctionName" expression="" defaultValue="&quot;intSeq&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="GO_BLOCK" value="true" />
+      <option name="GO_EXPRESSION" value="true" />
+      <option name="GO_FILE" value="true" />
+      <option name="GO_STATEMENT" value="true" />
+      <option name="GO_TYPE" value="true" />
     </context>
   </template>
 </templateSet>
