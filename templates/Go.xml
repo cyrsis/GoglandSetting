@@ -54,7 +54,17 @@
     <variable name="Value_4" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="Value_5" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
+      <option name="GO_BLOCK" value="true" />
+      <option name="GO_EXPRESSION" value="true" />
+      <option name="GO_FILE" value="true" />
+      <option name="GO_STATEMENT" value="true" />
       <option name="GO_TYPE" value="true" />
+    </context>
+  </template>
+  <template name="soutc" value="fmt.Println($clipBoard$)" description="fmt.Println(clipboard)" toReformat="true" toShortenFQNames="true">
+    <variable name="clipBoard" expression="clipboard()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO_STATEMENT" value="true" />
     </context>
   </template>
 </templateSet>
