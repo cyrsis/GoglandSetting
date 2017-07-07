@@ -178,7 +178,7 @@
       <option name="GO_TYPE" value="true" />
     </context>
   </template>
-  <template name="interface" value="type $geometry$ interface {&#10;    $area$() float64&#10;    $perim$() float64&#10;}" description="Interface on Struct" toReformat="true" toShortenFQNames="true">
+  <template name="interface" value="type $geometry$ interface {&#10;    $area$() float64&#10;    $perim$() float64&#10;}&#10;func (structData rect) $area$() float64 {&#10;    return structData.width * StructData.height&#10;}&#10;func (structData rect) $perim$() float64 {&#10;    return 2*structData.width * 2*StructData.height&#10;}&#10;" description="Interface on Struct" toReformat="true" toShortenFQNames="true">
     <variable name="geometry" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="area" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="perim" expression="" defaultValue="" alwaysStopAt="true" />
