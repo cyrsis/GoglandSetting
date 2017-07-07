@@ -86,4 +86,18 @@
       <option name="GO_TYPE" value="true" />
     </context>
   </template>
+  <template name="rangeInDic" value="for k, v := range kvs {&#10;        fmt.Printf(&quot;%s -&gt; %s\n&quot;, k, v)&#10;    }" description="Loop over variable" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="GO_BLOCK" value="true" />
+      <option name="GO_EXPRESSION" value="true" />
+      <option name="GO_FILE" value="true" />
+      <option name="GO_STATEMENT" value="true" />
+      <option name="GO_TYPE" value="true" />
+    </context>
+  </template>
+  <template name="funcTakesAllInt" value="func plusPlus(a, b, c int) int {&#10;    return a + b + c&#10;}" description="Function take all Int return int" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="GO_STATEMENT" value="true" />
+    </context>
+  </template>
 </templateSet>
