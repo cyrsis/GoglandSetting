@@ -12,7 +12,7 @@
       <option name="GO_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="//h" value="/**&#10; * $Objective$&#10; *&#10; * @param  url  an absolute URL giving the base location of the image&#10; * @param  name the location of the image, relative to the url argument&#10; * @return      the image at the specified URL&#10; * @see         Image&#10; * @$date$ $time$&#10; */" description="Comment for header Files" toReformat="true" toShortenFQNames="true" deactivated="true">
+  <template name="//h" value="/**&#10; * $Objective$&#10; *&#10; * @param  url  an absolute URL giving the base location of the image&#10; * @param  name the location of the image, relative to the url argument&#10; * @return      the image at the specified URL&#10; * @see         Image&#10; * @$date$ $time$&#10; */" description="Comment for header Files" toReformat="true" toShortenFQNames="true">
     <variable name="Objective" expression="" defaultValue="&quot;Objective&quot;" alwaysStopAt="true" />
     <variable name="date" expression="date()" defaultValue="" alwaysStopAt="true" />
     <variable name="time" expression="time()" defaultValue="" alwaysStopAt="true" />
@@ -44,6 +44,17 @@
     <variable name="function2" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="GO_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="intArray" value="[$length$]int{$Value_1$, $Value_2$, $Value_3$, $Value_4$, $Value_5$}" description="IntArray with Size" toReformat="true" toShortenFQNames="true">
+    <variable name="length" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Value_1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Value_2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Value_3" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Value_4" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Value_5" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO_TYPE" value="true" />
     </context>
   </template>
 </templateSet>
