@@ -67,4 +67,23 @@
       <option name="GO_STATEMENT" value="true" />
     </context>
   </template>
+  <template name="sliceString" value="sliceString := []string{&quot;$variable1$&quot;, &quot;$variable1$&quot;, &quot;$variable1$&quot;}" description="slice of String" toReformat="true" toShortenFQNames="true">
+    <variable name="variable1" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO_BLOCK" value="true" />
+      <option name="GO_EXPRESSION" value="true" />
+      <option name="GO_FILE" value="true" />
+      <option name="GO_STATEMENT" value="true" />
+      <option name="GO_TYPE" value="true" />
+    </context>
+  </template>
+  <template name="dict" value="mapKStringVInt :=map[string]int{&quot;foo&quot;: 1, &quot;bar&quot;: 2}" description="maps in Go" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="GO_BLOCK" value="true" />
+      <option name="GO_EXPRESSION" value="true" />
+      <option name="GO_FILE" value="true" />
+      <option name="GO_STATEMENT" value="true" />
+      <option name="GO_TYPE" value="true" />
+    </context>
+  </template>
 </templateSet>
