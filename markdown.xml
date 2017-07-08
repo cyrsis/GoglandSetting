@@ -1,5 +1,5 @@
 <application>
   <component name="MarkdownApplicationSettings">
-    <MarkdownCssSettings StylesheetUri="jar:file:/C:/Users/victor888/.Gogland1.0/config/plugins/markdown/lib/markdown.jar!/org/intellij/plugins/markdown/settings/darcula.css" />
+    <MarkdownCssSettings StylesheetUri="jar:file:/Users/victor/Library/Application%20Support/Gogland1.0/markdown/lib/markdown.jar!/org/intellij/plugins/markdown/settings/darcula.css" />
   </component>
 </application>
