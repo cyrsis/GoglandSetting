@@ -46,8 +46,7 @@
       <option name="GO_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="intArray" value="[$length$]int{$Value_1$, $Value_2$, $Value_3$, $Value_4$, $Value_5$}" description="IntArray with Size" toReformat="true" toShortenFQNames="true">
-    <variable name="length" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="intArray" value="[...]int{$Value_1$, $Value_2$, $Value_3$, $Value_4$, $Value_5$}" description="IntArray with Size" toReformat="true" toShortenFQNames="true">
     <variable name="Value_1" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="Value_2" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="Value_3" expression="" defaultValue="" alwaysStopAt="true" />
@@ -67,8 +66,11 @@
       <option name="GO_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="sliceString" value="sliceString := []string{&quot;$variable1$&quot;, &quot;$variable1$&quot;, &quot;$variable1$&quot;}" description="slice of String" toReformat="true" toShortenFQNames="true">
+  <template name="sliceString" value="$sliceString$ := []string{&quot;$variable1$&quot;, &quot;$variable2$&quot;, &quot;$variable3$&quot;}" description="slice of String []T" toReformat="true" toShortenFQNames="true">
+    <variable name="sliceString" expression="" defaultValue="&quot;variable&quot;" alwaysStopAt="true" />
     <variable name="variable1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="variable2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="variable3" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="GO_BLOCK" value="true" />
       <option name="GO_EXPRESSION" value="true" />
@@ -189,6 +191,52 @@
       <option name="GO_FILE" value="true" />
       <option name="GO_STATEMENT" value="true" />
       <option name="GO_TYPE" value="true" />
+    </context>
+  </template>
+  <template name="map" value="map[$KEY_TYPE$]$VALUE_TYPE$" description="Map type" toReformat="true" toShortenFQNames="true">
+    <variable name="KEY_TYPE" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <variable name="VALUE_TYPE" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO" value="true" />
+    </context>
+  </template>
+  <template name="arrayType" value="[...]$type${$Value_1$, $Value_2$, $Value_3$, $Value_4$, $Value_5$}" description="arrayType" toReformat="true" toShortenFQNames="true">
+    <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Value_1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Value_2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Value_3" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Value_4" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Value_5" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO_BLOCK" value="true" />
+      <option name="GO_EXPRESSION" value="true" />
+      <option name="GO_FILE" value="true" />
+      <option name="GO_STATEMENT" value="true" />
+      <option name="GO_TYPE" value="true" />
+    </context>
+  </template>
+  <template name="slice" value="$slice$ := []$type${&quot;$variable1$&quot;, &quot;$variable2$&quot;, &quot;$variable3$&quot;}" description="slice []T" toReformat="true" toShortenFQNames="true">
+    <variable name="slice" expression="" defaultValue="&quot;sliceVar&quot;" alwaysStopAt="true" />
+    <variable name="type" expression="" defaultValue="&quot;string&quot;" alwaysStopAt="true" />
+    <variable name="variable1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="variable2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="variable3" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO_BLOCK" value="true" />
+      <option name="GO_EXPRESSION" value="true" />
+      <option name="GO_FILE" value="true" />
+      <option name="GO_STATEMENT" value="true" />
+      <option name="GO_TYPE" value="true" />
+    </context>
+  </template>
+  <template name="mapSB" value="$varsMaps$ :=map[$keys$]$values${&quot;$var1$&quot;:true,&quot;$var2$&quot;:false} " description="Map String as KEY, Bool as Value" toReformat="true" toShortenFQNames="true">
+    <variable name="varsMaps" expression="" defaultValue="&quot;varMap&quot;" alwaysStopAt="true" />
+    <variable name="keys" expression="" defaultValue="&quot;string&quot;" alwaysStopAt="true" />
+    <variable name="values" expression="" defaultValue="&quot;bool&quot;" alwaysStopAt="true" />
+    <variable name="var1" expression="" defaultValue="&quot;SomeKeys&quot;" alwaysStopAt="true" />
+    <variable name="var2" expression="" defaultValue="&quot;True&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="GO" value="true" />
     </context>
   </template>
 </templateSet>
