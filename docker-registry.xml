@@ -5,10 +5,5 @@
       <option name="name" value="Docker Registry" />
       <option name="username" value="cyrsis" />
     </DockerRegistry>
-    <DockerRegistry email="em3888@gmail.com">
-      <option name="address" value="registry.hub.docker.com" />
-      <option name="name" value="Docker Registry" />
-      <option name="username" value="cyrsis" />
-    </DockerRegistry>
   </component>
 </application>
